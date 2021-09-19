@@ -1,0 +1,98 @@
+gg.alert("My Time at Portia", "Cheat Menu")
+--gg.toast("Subscribe")
+while true do
+  if gg.isVisible(true) then
+     menuk = 1
+     gg.setVisible(false)
+   end
+   START = 1
+   function START()
+   menu = gg.choice({
+   	"Freeze Time",
+       "Instan Fishing",
+       "Lompat Tinggi ON",
+       "Lompat Tinggi OFF",
+       "Exit"
+       }, nil, "📄Cheat Menu")
+       if menu == 1 then
+          ch1()
+        end
+       if menu == 2 then
+          ch2()
+        end
+       if menu == 3 then
+           ch3()
+        end
+        if menu == 4 then
+           ch4()
+        end
+       if menu == 5 then
+           os.exit()
+        end
+       if menu == nil then
+       else
+       end
+       menuk = -1
+     end
+     
+     function ch1()
+     gg.clearResults()
+     gg.setRanges(gg.REGION_ANONYMOUS)
+     gg.searchNumber("60;60;1000::13", gg.TYPE_DWORD)
+     gg.refineNumber("1000", gg.TYPE_DWORD)
+     gg.getResults(100)
+     gg.editAll("0", gg.TYPE_DWORD)
+     gg.clearResults()
+     gg.toast("Done")
+     end
+     
+     function ch2()
+     gg.clearResults()
+     gg.setRanges(gg.REGION_ANONYMOUS)
+     gg.searchNumber("5.0;1.0;1.5;0.5::25", gg.TYPE_FLOAT)
+     gg.refineNumber("5.0;1.0::5", gg.TYPE_FLOAT)
+     gg.getResults(100)
+     gg.editAll("0", gg.TYPE_FLOAT)
+     gg.clearResults()
+     gg.searchNumber("60.0;1.5;1.0::9", gg.TYPE_FLOAT)
+     gg.refineNumber("1.5", gg.TYPE_FLOAT)
+     gg.getResults(100)
+     gg.editAll("1000", gg.TYPE_FLOAT)
+     gg.clearResults()
+     gg.toast("Done")
+     end
+     
+     function ch3()
+     gg.clearResults()
+     gg.setRanges(gg.REGION_ANONYMOUS)
+     gg.searchNumber("18.5;90.0::5", gg.TYPE_FLOAT)
+     gg.refineNumber("18.5", gg.TYPE_FLOAT)
+     gg.getResults(100)
+     gg.editAll("100", gg.TYPE_FLOAT)
+     gg.clearResults()
+     gg.toast("Done")
+     end
+     
+     function ch4()
+     gg.clearResults()
+     gg.setRanges(gg.REGION_ANONYMOUS)
+     gg.searchNumber("100;90.0::5", gg.TYPE_FLOAT)
+     gg.refineNumber("100", gg.TYPE_FLOAT)
+     gg.getResults(100)
+     gg.editAll("18.5", gg.TYPE_FLOAT)
+     gg.clearResults()
+     gg.toast("Done")
+     end
+     
+     
+     function ch5()
+     os.exit()
+     end
+     
+    --print("Kosong")
+    if menuk == 1 then
+       START()
+     end
+   end
+     
+     
